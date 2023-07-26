@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-22 11:51+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\fpages\admin.py:11
+msgid "Advanced options"
+msgstr ""
+
+
+#: .\templates\flatpages\default.html:14
+msgid "Lang"
+msgstr ""
+
+#: .\templates\flatpages\default.html:16
+msgid "English"
+msgstr ""
+
+#: .\templates\post\news.html:20
+msgid "All news"
+msgstr " Все новости "
+
+#: .\templates\post\news.html:37
+msgid "Article Title"
+msgstr " Название статьи "
+
+#: .\templates\post\news.html:38
+msgid "Article text"
+msgstr " Текст статьи "
+
+#: .\templates\post\news.html:39
+msgid "Article category"
+msgstr " Категория статьи "
+
+#: .\templates\post\news.html:40
+msgid "Publication date"
+msgstr " Дата публикации "
+
+#: .\templates\post\news.html:23
+msgid "Start date"
+msgstr " Поиск по дате публикации "
+
+#: .\templates\flatpages\default.html:62
+msgid "Authors"
+msgstr "Авторы статей"
+
+#: .\templates\flatpages\default.html:65
+msgid "News"
+msgstr "Новости"
+
+#: .\templates\flatpages\default.html:68
+msgid "Categogy"
+msgstr "Категории"
+
+#: .\templates\post\news.html:46
+msgid "Read completely"
+msgstr " Читать полностью "
+

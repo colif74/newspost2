@@ -1,0 +1,22 @@
+{% extends 'flatpages/default.html' %}
+
+<!-- Название у нас будет Product -->
+{% block title %}
+author
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
+{% block content %}
+<h1>Страница Автора: {{ author.user.username }}</h1>
+{% for post in posts %}
+        <h2>{{ post.header }}</h2>
+        Категории:
+        {% for category in post.category.all %}
+            {{ category.name }}
+        {% endfor %}
+        <br>
+        {{ post.contents }}
+        <button><a class="text-center" href="/news/{{post.id}}">читать статью</a> </button>
+        <br>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends 'flatpages/default.html' %}
+
+<!-- Название у нас будет Product -->
+{% block title %}
+Categories
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
+{% block content %}
+    <h1>Все категории</h1>
+   {% for category in categories %}
+            <h2><a href="{% url 'posts_of_category_list' category.id%}"> {{ category.name }}</a></h2>
+    {% endfor %}
+
+{% if is_not_subscriber %}
+<button> <a class="text-center" href="subscribers"> Подписаться на категорию!</a></button>
+    {% endif %}
+
+{% if not is_not_subscriber %}
+<button> <a href="unsubscribe"> Отписаться от категории!</a></button>
+    {% endif %}
+
+{% endblock content %}

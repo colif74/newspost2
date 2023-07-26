@@ -1,0 +1,44 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+{% load custom_tags %}
+{% load cache %}
+
+{% cache 300 article %}
+<!-- Название у нас будет products -->
+{% block title %}
+Posts
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим все товары -->
+{% block content %}
+   <h1>{{ post_detail.post_title|censor }}</h1>
+    <hr>
+    {% if post_detail %}
+        <table>
+            <tr>
+                <td>заголовок</td>
+                <td>дата публикации</td>
+                <td>содержание</td>
+                 <td>действия</td>
+            </tr>
+            <tr>
+                <td>______________</td>
+                <td>______________</td>
+                <td>______________</td>
+                <td>______________</td>
+            </tr>
+            <tr>
+            <td>{{ post_detail.header|censor}}</td>
+            <td>{{ post_detail.date_in|date:'d M Y'}}</td>
+            <td>{{ post_detail.context|censor}}</td>
+             <td>
+            <a href="{% url 'post_edit' post_detail.id %}"><u>Редактировать</u></a> <!--ссылка на редактирование поста-->
+            <a href="{% url 'post_delete' post_detail.id %}"><u> Удалить </u></a> <!-- ссылка на удаление поста-->
+            </td>
+        </tr>
+        </table>
+    {% else %}
+        <h2>упс! её нет!</h2>
+    {% endif %}
+    {% endblock content %}
+    {% endcache %}

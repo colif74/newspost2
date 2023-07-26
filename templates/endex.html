@@ -1,0 +1,23 @@
+{% extends 'flatpages/default.html' %}
+{% load cache %}
+{% block content %}
+{% load i18n %}
+<html lang="en">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <body>
+       <h2>Пользователь {{request.user.username}}</h2>
+    <div> информация о пользователе </div>
+    {% if is_not_author %}
+    <button> <a href="{% url 'upgrade' %}"> Хочу стать автором!</a> </button>
+    {% else %}
+    <h1>вы уже автор</h1>
+    {% endif %}
+    <button> <a href="logout/">Выйти</a> </button>
+     {% endblock %}
+</body>
+
+</html>
+

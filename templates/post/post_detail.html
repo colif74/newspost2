@@ -1,0 +1,27 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+
+<!-- Название у нас будет Post -->
+{% block title %}
+ПОСТ
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
+{% block content %}
+
+    <h1>{{ posts.header }}</h1>
+    <hr>
+    <h5>{{ posts.date_in }}</h5>
+    <h4>{% for category in posts.category.all %}
+        {{category.name}}
+    {% endfor %}</h4>
+    {{ posts.contents }}
+
+<h3>{{ author.user.username }}</h3>
+
+<hr>
+<button><a class="nav-link" href="/news/{{posts.id}}/delete/">Удалить</a></button>
+<button><a class="nav-link" href="/news/{{posts.id}}/update/">Редактировать</a></button>
+
+    {% endblock content %}

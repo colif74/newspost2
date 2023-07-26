@@ -1,0 +1,17 @@
+{% extends 'flatpages/default.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Страница входа </title>
+</head>
+<body>
+{% block content %}
+<h2> Регистрация </h2>
+<form method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Продолжить">
+</form>
+{% endblock %}
+</body>
+</html>

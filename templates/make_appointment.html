@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправка сообщений</title>
+</head>
+<body>
+<h1>Отправка сообщений</h1>
+  <form action="{%url 'news:make_appointment'%}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="client_name">Ваше имя</label>
+    <input type="text" name="client_name"><br>
+    <label for="message">Непереводимая хрень</label>
+    <input type="text" name="message"><br>
+    <label for="date">Дата и время</label>
+    <input type="text" name="date"><br>
+    <input type="submit">
+  </form>
+</body>
+</html>
